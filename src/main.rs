@@ -7,6 +7,7 @@ use structopt::StructOpt;
 
 #[derive(StructOpt)]
 struct Opt {
+  /// Available sources: hackersnews, producthunt, techmeme, wsj or github-trending
   pub source: Option<NewsSource>,
   #[structopt(short, long, default_value = "10")]
   pub max_page: usize,

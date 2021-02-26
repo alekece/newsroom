@@ -27,7 +27,7 @@ impl FromStr for NewsSource {
       "github-trending" => Ok(Self::GithubTrending),
       _ => Err(Error::ParseError(io::Error::new(
         io::ErrorKind::InvalidInput,
-        "",
+        s,
       ))),
     }
   }
